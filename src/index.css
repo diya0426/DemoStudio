@@ -1,0 +1,127 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&family=Open+Sans:wght@300;400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Premium palette: deep blue, gold, white, dark backgrounds */
+    --background: 220 25% 8%;           /* Deep blue-black */
+    --foreground: 0 0% 100%;            /* Pure white */
+
+    --card: 220 25% 12%;                /* Slightly lighter deep blue */
+    --card-foreground: 0 0% 100%;
+
+    --popover: 220 25% 12%;
+    --popover-foreground: 0 0% 100%;
+
+    --primary: 44 95% 60%;              /* Gold */
+    --primary-foreground: 220 25% 12%;  /* Deep blue for contrast */
+
+    --secondary: 220 15% 20%;           /* Muted dark blue */
+    --secondary-foreground: 44 95% 60%; /* Gold */
+
+    --muted: 220 15% 16%;               /* Very dark blue */
+    --muted-foreground: 44 95% 60%;     /* Gold */
+
+    --accent: 44 95% 60%;               /* Gold accent */
+    --accent-foreground: 220 25% 12%;
+
+    --destructive: 0 84.2% 60.2%;       /* Red for errors */
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 44 95% 60%;               /* Gold borders */
+    --input: 220 15% 16%;               /* Very dark blue for inputs */
+    --ring: 44 95% 60%;                 /* Gold ring */
+
+    --radius: 0.5rem;
+
+    --hero-overlay: linear-gradient(135deg, hsla(220, 80%, 10%, 0.95), hsla(44, 95%, 60%, 0.7));
+    --gradient-primary: linear-gradient(135deg, hsl(44, 95%, 60%), hsl(220, 100%, 20%));
+    --gradient-accent: linear-gradient(135deg, hsl(44, 95%, 60%), hsl(220, 100%, 20%));
+    --gradient-dark: linear-gradient(180deg, hsl(220, 25%, 8%), hsl(220, 30%, 15%));
+
+    --shadow-card: 0 4px 20px -4px hsla(44, 95%, 60%, 0.08);
+    --shadow-elevated: 0 10px 40px -10px hsla(44, 95%, 60%, 0.15);
+    --shadow-mega: 0 20px 60px -15px hsla(44, 95%, 60%, 0.2);
+
+    --font-heading: 'Montserrat', sans-serif;
+    --font-body: 'Open Sans', sans-serif;
+
+    --topbar-bg: 220 25% 12%;
+    --topbar-foreground: 44 95% 60%;
+    --navbar-bg: 220 25% 8%;
+    --navbar-foreground: 44 95% 60%;
+    --mega-bg: 220 25% 12%;
+    --mega-foreground: 44 95% 60%;
+    --mega-hover: 44 95% 60%;
+    --footer-bg: 220 25% 12%;
+    --footer-foreground: 44 95% 60%;
+
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 240 5.3% 26.1%;
+    --sidebar-primary: 240 5.9% 10%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 240 4.8% 95.9%;
+    --sidebar-accent-foreground: 240 5.9% 10%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: var(--font-body);
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-heading);
+  }
+}
+
+@layer components {
+  .mega-menu-enter {
+    animation: megaSlideDown 0.3s ease-out forwards;
+  }
+
+  .mega-menu-exit {
+    animation: megaSlideUp 0.2s ease-in forwards;
+  }
+}
+
+@keyframes megaSlideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes megaSlideUp {
+  from {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  to {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+.animate-float {
+  animation: float 3s ease-in-out infinite;
+}
