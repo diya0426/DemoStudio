@@ -6,7 +6,7 @@ A modern, pixel-perfect, developer-focused React + Vite project.
 
 ## Project Info
 
-- **Live URL:**https://demo-studio-snowy.vercel.app/
+- **Live URL:**https://demo-studio-w53h.vercel.app/
 - **Repository:**https://github.com/diya0426/DemoStudio.git
 
 ---
