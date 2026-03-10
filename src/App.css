@@ -1,3 +1,54 @@
+
+.custom-navbar {
+  background: #13161b !important;
+}
+.custom-navbar-brand {
+  font-weight: bold;
+  font-size: 1.5rem;
+  color: #ffd54f !important;
+}
+.custom-logo-bg {
+  background: #ffd54f;
+  border-radius: 12px;
+  width: 48px;
+  height: 48px;
+  margin-right: 10px;
+}
+.custom-navbar-title {
+  color: #ffd54f;
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+.custom-navbar-title-accent {
+  color: #2196f3;
+}
+.custom-nav-link {
+  color: #ffd54f !important;
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 1.1rem;
+  letter-spacing: 1px;
+  margin: 0 12px;
+}
+.custom-nav-link:hover, .custom-nav-link:focus {
+  color: #fffde4 !important;
+}
+.custom-quote-btn {
+  background: linear-gradient(90deg, #ffd54f 0%, #233a7d 100%);
+  color: #222 !important;
+  font-weight: bold;
+  border-radius: 12px;
+  padding: 10px 32px;
+  font-size: 1.1rem;
+  text-transform: uppercase;
+  border: none;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  transition:  0.3s, color 0.3s;
+}
+.custom-quote-btn:hover, .custom-quote-btn:focus {
+  background: linear-gradient(90deg, #233a7d 0%, #ffd54f 100%);
+  color: #fff !important;
+}
 #root {
   max-width: 1280px;
   margin: 0 auto;
